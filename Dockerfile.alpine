@@ -1,0 +1,7 @@
+ARG BASE_TAG
+FROM pizzafactory0contorno/piatto:${BASE_TAG}
+
+USER root
+RUN apk add --no-cache npm poppler ghostscript \
+ && npm install -g @vivliostyle/cli
+USER user

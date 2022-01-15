@@ -1,0 +1,6 @@
+ARG BASE_TAG
+FROM pizzafactory0contorno/piatto:${BASE_TAG}
+
+RUN sudo apt update \
+ && sudo apt install -y npm poppler-utils ghostscript \
+ && sudo npm install -g @vivliostyle/cli
